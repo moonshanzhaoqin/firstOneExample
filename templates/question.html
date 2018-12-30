@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}psot
+{% endblock %}
+
+
+{% block head %}
+<link rel="stylesheet", href="{{url_for('static',filename='css/question.css') }}">
+{% endblock %}
+
+
+{% block main %}
+<form action="" method="post">
+<h3 class="page-title">
+    post question
+</h3>
+<div class="form-container">
+    <div class="form-group">
+        <input type="text" placeholder="title" name="title" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <textarea name="context" rows="10" class="form-control" placeholder="context"></textarea>
+    </div>
+
+    <div class="form-group">
+        <button class="btn btn-primary">post</button>
+    </div>
+
+</div>
+
+
+</form>
+{% endblock %}

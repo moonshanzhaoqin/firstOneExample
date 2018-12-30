@@ -1,0 +1,19 @@
+#coding:utf-8
+
+
+import os
+DEBUG = True
+SECRET_KEY = os.urandom(24)
+
+HOSTNAME = "127.0.0.1"
+USERNAME = "MoonShan"
+PASSWORD = "123456"
+DATABASES = "test"
+PORT = 3306
+
+DB_URI="mysql+mysqldb://{}:{}@{}:{}/{}?charset=utf8".format(USERNAME,PASSWORD,HOSTNAME,PORT,DATABASES)
+SQLALCHEMY_DATABASE_URI = DB_URI
+# SQLCHEMY_TRACK_MODIFICATIONS = True
+
+
+SQLALCHEMY_TRACK_MODIFICATIONS =False
